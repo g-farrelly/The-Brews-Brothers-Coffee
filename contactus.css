@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container {
+    background-image: url(wood.jpg);
+    background-size: cover;
+    display: grid;
+    height: 82em;
+
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 0.5fr auto;
+
+    grid-template-areas: 
+        "nav nav nav"
+        ". . ."
+        ". main ."
+        ". . .";
+
+    font-family: 'Poppins', sans-serif ;
+    font-weight: normal;
+    font-size: 1em;
+
+    grid-gap: 1em;
+}
+
+nav {
+    background: #6e2e12;
+    width: 100%;
+    grid-area: nav;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 12.657%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: orange;
+    background-color: #421c0b;
+}
+
+.active {
+    color: orange;
+    background-color: #421c0b;
+}
+
+main {
+    grid-area: main;
+    text-align: center;
+    background-color: white;
+    height: auto;
+}
+
+.form_container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_group input[type="text"] {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.form_group input[type="email"],
+.form_group select,
+.form_group textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}          
+
+.form_group textarea {
+    height: 150px;
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    color: black;
+    font-size: 1.5em;
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
+
+.form_group .btn_submit {
+    padding: 10px 20px;
+    margin: 5px;
+    width: 80px;
+
+    background-color: #6e2e12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.form_group .btn_submit:hover {
+    background-color: orange;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.rating_scale {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar_container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+.bar_5 {
+    width: 32%;
+    height: 18px;
+    background-color: greenyellow;
+}
+
+.bar_4 {
+    width: 45%;
+    height: 18px;
+    background-color: aquamarine;                    
+}
+
+.bar_3 {
+    width: 17%;
+    height: 18px;
+    background-color: yellow;                    
+}
+
+.bar_2 {
+    width: 2%;
+    height: 18px;
+    background-color: orange;                    
+}
+
+.bar_1 {
+    width: 1%;
+    height: 18px;
+    background-color: red;                    
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        height: 40em;
+
+        grid-template-areas: 
+            "nav nav nav"
+            "main main main";
+    }
+}

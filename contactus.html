@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="icon" href="brews_brothers_logo_transparent.png">
+        <link rel="stylesheet" href="contactus.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <nav>
+                <a href="main.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="aboutus.html">About us</a>
+                <a href="shop.html">Shop</a>
+                <a href="gallery.html">Gallery</a>
+                <a class="active" href="contactus.html">Contact Us</a>
+            </nav>
+            <main>
+                <h2>Say Hello!</h2>
+                <p>
+                    Questions, comments, secret love notes? We'd love to hear from you. Please complete the form below, or email us at hello@brewsbrotherscoffee.ie
+                </p>
+                
+                <div class="form_container">
+                    <form id="reviewForm">
+                        <div class="form_group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form_group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="from_group rating">
+                            <label for="rating">Rating</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">☆</label>
+                            
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">☆</label>
+                            
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">☆</label>
+                            
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">☆</label>
+                            
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">☆</label>
+                        </div>
+                        
+                        <div class="form_group">
+                            <label for="message">Review</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <div class="form_group">
+                            <button type="button" class="btn_submit" onclick="clear_form()">Submit</button>
+                            <button type="button" class="btn_submit" onclick="clear_form()">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="rating_scale">
+                    <h3>Our Ratings:</h3>
+                    <p>4.3 average based on 462 reviews.</p>
+                    
+                    <div class="row">
+                        <div class="side">
+                            <div>5 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar_container">
+                                <div class="bar_5"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>150</div>
+                        </div>
+                        
+                        <div class="side">
+                            <div>4 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar_container">
+                                <div class="bar_4"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>212</div>
+                        </div>
+                        
+                        <div class="side">
+                            <div>3 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar_container">
+                                <div class="bar_3"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>80</div>
+                        </div>
+                        
+                        <div class="side">
+                            <div>2 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar_container">
+                                <div class="bar_2"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>12</div>
+                        </div>
+                        
+                        <div class="side">
+                            <div>1 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar_container">
+                                <div class="bar_1"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>8</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <script>
+                function clear_form() {
+                    document.getElementById("reviewForm").reset();
+                }
+            </script>
+        </div>
+    </body>
+</html>

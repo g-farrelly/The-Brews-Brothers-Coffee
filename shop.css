@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container {
+    display: grid;
+    height: 62em;
+
+    background-image: url(wood.jpg);
+    background-size: cover;
+
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+
+    grid-template-areas: 
+        "nav nav nav nav"
+        "sidebar item1 item2 item3"
+        "sidebar item4 item5 item6"
+        "footer footer footer footer";
+
+    grid-gap: 1em;
+
+    font-family: 'Poppins', sans-serif ;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+nav {
+    background: #6e2e12;
+    width: 100%;
+    grid-area: nav;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 10%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: orange;
+    background-color: #421c0b;
+}
+
+.active {
+    color: orange;
+    background-color: #421c0b;
+}
+
+#sidebar{
+    grid-area: sidebar;
+    background-image: url(coffee_beans.jpeg);
+    margin-left: 1em;
+}
+
+#item1, #item2, #item3, #item4, #item5, #item6 {
+    height: 26em;
+    width: auto;
+    background-color: white;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#item1 { grid-area: item1; }
+#item2 { grid-area: item2; }
+#item3 { 
+    grid-area: item3;
+    margin-right: 1em;
+}
+#item4 { grid-area: item4; }
+#item5 { grid-area: item5; }
+#item6 { 
+    grid-area: item6;
+    margin-right: 1em;
+}
+
+#item1:hover, #item2:hover, #item3:hover, #item4:hover, #item5:hover, #item6:hover {
+    box-shadow: 2px 2px #6e2e12;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6 {
+    height: 20em;
+    width: auto;
+    justify-content: center;
+}
+
+table {
+    margin: auto;
+}
+
+.price {
+    color: grey;
+}
+
+.discount_price {
+    color: red;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:1020px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        height: 90em;
+        width: 100%;
+
+        margin: auto;
+
+        grid-gap: 1em;
+
+        grid-template-areas: 
+            "nav nav"
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "footer footer";
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    nav a {
+        width: auto;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}

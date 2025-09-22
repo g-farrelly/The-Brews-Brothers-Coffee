@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container {
+    display: grid;
+    height: 62em;
+
+    background-image: url(wood.jpg);
+    background-size: cover;
+
+    grid-template-columns: 1fr 2.2fr 1fr;
+    grid-template-rows: 0.5fr auto;
+
+    grid-template-areas: 
+        "nav nav nav"
+        "photo1 main photo2"
+        ". . .";
+
+    grid-gap: 0.8em;
+
+    font-family: 'Poppins', sans-serif ;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+nav {
+    background: #6e2e12;
+    width: 100%;
+    grid-area: nav;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 10%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: orange;
+    background-color: #421c0b;
+}
+
+.active {
+    color: orange;
+    background-color: #421c0b;
+}
+
+main {
+    background-color: white;
+}
+
+h3 {
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+#photo1 {
+    grid-area: photo1;
+    margin-left: 0.4em;
+    background-image: url(coffee_loyalty_card.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo2 {
+    grid-area: photo2;
+    margin-right: 0.4em;
+    background-image:  url(pastry.jpg);
+    background-size: cover;  
+    background-position: center;
+}
+
+footer {
+    grid-area: footer;
+    background-image: url(coffee_beans.jpeg);
+}
+
+table {
+    width: 100%;
+    justify-content: center;
+}
+
+@media only screen and (max-width:1020px) {
+
+    .container {
+        height: 60em;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: auto;
+
+        margin: auto;
+
+        grid-gap: 0.2em;
+
+        grid-template-areas: 
+            "nav nav nav"
+            "photo1 main photo2"
+            ". . .";
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    nav a {
+        width: auto;
+    }
+
+    main {
+        grid-area: main;
+    }
+}

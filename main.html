@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Brew's Brothers Coffee</title>
+        <link rel="icon" href="brews_brothers_logo_transparent.png">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <nav> 
+                <a class="active" href="main.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="aboutus.html">About us</a>
+                <a href="shop.html">Shop</a>
+                <a href="gallery.html">Gallery</a>  
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+            
+            <main>
+                <img class="logo_big" src="brews_brothers_logo_transparent.png" alt="logo">
+                <h1>The Brew's Brothers Coffee</h1>
+                
+                    <p style="text-align: center;">☕️ <i>Coffee for your Well-Bean</i> ☕️</p>
+                <p style="text-align: center;">Join us for Coffee, Tea, Hot Chocolate, Pastries, Soft Drinks and more at The Old Forge Killoe - N39 A7N6.</p>
+                    <p style="text-align: center;">🐶<i> All Pets Welcome </i>🐱</p>  
+            </main>
+            
+            <div id="sidebar"></div>
+            
+            <div id="content1">
+                <p class="small_heading">Opening Hours</p>
+                
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening</th>
+                        <th>Closing</th>
+                    </tr>   
+                    <tr>
+                        <td>Friday</td>
+                        <td>8.00 am</td>
+                        <td>2.00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8.00 am</td>
+                        <td>2.00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>9.00 am</td>
+                        <td>2.00 pm</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="content2">            
+                <div id="google_map" style="height: 100%; width: 100%;"></div>            
+                    <script>
+                        function myMap() {
+                            var mapProp = {
+                                center: new google.maps.LatLng(53.7611895, -7.7457087),
+                                zoom: 11,
+                            };
+                        var map = new google.maps.Map(document.getElementById("google_map"), mapProp);
+                            
+                        var marker = new google.maps.Marker({position: mapProp.center});
+                        marker.setMap(map);
+                        }
+                    </script>
+                
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCkItM_EaKVHxofwYhXpgAXE2Hj-GWs5c&callback=myMap"></script>
+            </div>
+            
+            <div id="content3"></div>
+            
+            <footer> 
+                To keep up to date with all the latest from us at The Brew's Brothers Coffee, follow our social media pages!<br>
+                You can also click our logo to sign up to our Newsletter.
+                
+            </footer> 
+            
+            <div id="media">                
+                <!-- Button to open form -->
+                <button type="button" onclick="openForm()">
+                    <img class="logo_button" src="brews_brothers_logo_transparent.png">
+                </button>
+                
+                <!-- The form -->
+                <div class="form-popup" id="newsletter">
+                    <form action="/action_page.php" class="form-container">
+                    
+                    <h2>Welcome to The Brew's Brothers Newsletter!</h2>
+                    <p>Subscribe to keep up to date with all the latest from us.</p>
+                        
+                        <label for="fullName"><b>Full Name</b></label>
+                        <input type="text" placeholder="Enter Full Name" name="fullName" required>
+                        
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <p>
+                            <button type="button" class="sub" onclick="closeForm()">Subscribe</button>
+                            <button type="button" class="cancel" onclick="closeForm()">Cancel</button>
+                        </p>
+                    </form>
+                </div>
+                
+                <script>
+                    function openForm() {
+                        document.getElementById("newsletter").style.display = "block";
+                    }
+                    
+                    function closeForm() {
+                        document.getElementById("newsletter").style.display = "none";
+                    }
+                </script>
+                
+                <a href="https://www.instagram.com/thebrewsbrothers_coffee/?hl=en">
+                    <img class="insta_logo" src="instagram_logo_transparent.png" alt="Instagram">
+                </a>
+                
+                <a href="https://www.tiktok.com/@thebrewsbrothers_coffee">
+                    <img class="tiktok_logo" src="tiktok_logo.png" alt="TikTok">
+                </a>   
+            </div>
+        </div>
+    </body>
+</html>
