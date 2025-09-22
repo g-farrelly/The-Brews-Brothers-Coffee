@@ -4,7 +4,7 @@
     display: grid;
     height: 62em;
 
-    background-image: url(wood.jpg);
+    background-image: url(../images/wood.jpg);
     background-size: cover;
 
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
@@ -54,7 +54,7 @@ nav a:hover {
 
 #sidebar{
     grid-area: sidebar;
-    background-image: url(coffee_beans.jpeg);
+    background-image: url(../images/coffee_beans.jpeg);
     margin-left: 1em;
 }
 

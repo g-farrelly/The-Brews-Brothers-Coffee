@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .container {
-    background-image: url(wood.jpg);
+    background-image: url(../images/wood.jpg);
     background-size: cover;
     display: grid;
     height: 50em;

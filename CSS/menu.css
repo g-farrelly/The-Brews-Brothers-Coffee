@@ -4,7 +4,7 @@
     display: grid;
     height: 62em;
 
-    background-image: url(wood.jpg);
+    background-image: url(../images/wood.jpg);
     background-size: cover;
 
     grid-template-columns: 1fr 2.2fr 1fr;
@@ -64,7 +64,7 @@ h3 {
 #photo1 {
     grid-area: photo1;
     margin-left: 0.4em;
-    background-image: url(coffee_loyalty_card.jpg);
+    background-image: url(../images/coffee_loyalty_card.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -72,14 +72,14 @@ h3 {
 #photo2 {
     grid-area: photo2;
     margin-right: 0.4em;
-    background-image:  url(pastry.jpg);
+    background-image:  url(../images/pastry.jpg);
     background-size: cover;  
     background-position: center;
 }
 
 footer {
     grid-area: footer;
-    background-image: url(coffee_beans.jpeg);
+    background-image: url(../images/coffee_beans.jpeg);
 }
 
 table {
